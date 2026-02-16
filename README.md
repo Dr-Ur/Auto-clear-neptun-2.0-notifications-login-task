@@ -3,7 +3,7 @@ Tampermonkey userscript, amely bejelentkezés után automatikusan megnyitja és 
 
 Fő funkciók:
 
-  - Értesítések automatikus megnyitása és megerősítése
+  - Értesítések automatikus megnyitása és elolvasásuk megerősítése
   
   - SPA / Angular kompatibilis (oldalfrissítés nélkül is működik)
   
