@@ -18,9 +18,9 @@ Telepítés:
 
  1. Telepítsd a Tampermonkey bővítményt. (https://www.tampermonkey.net/)
     
- 2. Nyisd meg ezt a fájlt:   neptun-auto-clear.user.js
+ 2. Kattints erre a linkre: https://github.com/Dr-Ur/Auto-clear-neptun-2.0-notifications-login-task/raw/refs/heads/main/neptun-auto-clear.user.js
     
- 3. Kattints az Install gombra
+ 3. A felugró ablakon kattints az Install gombra.
 
 
 Használat:
