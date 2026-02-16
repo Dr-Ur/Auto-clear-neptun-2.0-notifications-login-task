@@ -15,7 +15,7 @@ Telepítés
 Használat
   Jelentkezz be a Neptunba
   Az értesítések oldalon a script automatikusan lefut
-  Sikeres futás után a progress bar magától eltűnik
+  Sikeres futás után a progress bar magától eltűnik.
 
 Kompatibilitás
   Neptun Web 2.0 (hallgatói felület)
