@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Neptun 2.0: Auto Clear Notifications
 // @namespace    neptun-autoclear
+// @author       B.T.
 // @version      2.6
 // @description  Automatically clears Neptun 2.0 notifications login task. By.: B.T.
 // @include      *://neptunweb.semmelweis.hu/hallgato/login-task/system-messages*
