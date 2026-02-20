@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Neptun 2.0: Auto Clear Notifications
 // @namespace    neptun-autoclear
-// @version      2.6
+// @version      1.0
 // @description  Automatically clears Neptun 2.0 notifications login task. By.: B.T.
-// @include      *://neptunweb.semmelweis.hu/hallgato/login-task/system-messages*
+// @include      *://neptunweb.semmelweis.hu/hallgato/*
 // @grant        none
 // ==/UserScript==
 
@@ -155,11 +155,10 @@
   /* ================= CORE ================= */
 
   async function runAutoClear() {
-    if (sessionStorage.getItem(SESSION_KEY)) return;
     if (!isSystemMessagesPage()) return;
+    if (sessionStorage.getItem(SESSION_KEY)) return;
 
     sessionStorage.setItem(SESSION_KEY, '1');
-
     createUI();
 
     try {
@@ -181,7 +180,6 @@
 
         var confirm = null;
         var start = Date.now();
-
         while (!confirm && Date.now() - start < 6000) {
           confirm = findConfirmButton();
           await sleep(200);
@@ -191,13 +189,11 @@
 
         confirm.click();
         await sleep(900);
-
         cleared++;
       }
 
       setProgress(100);
       label.textContent = 'All notifications cleared';
-
       setTimeout(destroyUI, 1500);
 
     } catch (e) {
@@ -205,7 +201,7 @@
     }
   }
 
-  /* ================= SPA DETECTION ================= */
+  /* ================= SPA ROUTE DETECTION ================= */
 
   function hookHistory() {
     var push = history.pushState;
@@ -225,10 +221,8 @@
   }
 
   function onRouteChange() {
-    setTimeout(runAutoClear, 500);
+    setTimeout(runAutoClear, 600);
   }
-
-  /* ================= INIT ================= */
 
   hookHistory();
   onRouteChange();
